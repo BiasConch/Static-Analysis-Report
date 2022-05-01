@@ -1,6 +1,8 @@
-def Excel_File():
+import os
 
-    path = '/home/malware/Desktop/InFeCtEd/Excel'
+def Word_File():
+
+    path = '/home/malware/Desktop/InFeCtEd/Word'
 
 
     for entry in os.listdir(path):
