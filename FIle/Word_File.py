@@ -1,22 +1,32 @@
+from datetime import datetime
 import os
 import shutil
+
+
+
 
 def Word_File():
 
     path = '/home/malware/Desktop/InFeCtEd/Word/'
 
-
+    time = datetime.now()
+    
     for entry in os.listdir(path):
         if os.path.isfile(os.path.join(path, entry)):
-            os.mkdir(path + entry)
-            os.system("touch " + entry + ".txt" )
+            print(entry)
+            os.mkdir(path + entry + " Report")
+            os.chdir(path + entry + " Report")
+            os.system("touch " + "Report.txt" )
             os.chdir(path)
-            md5sum = os.system("md5sum " + entry)
-            file_check = os.system("file " + entry)
-            oleid = os.system("oleid " + entry)
             
-            if (oleid.find('file contains VBA macros') != -1):
-                olevba = os.system("olevba " + entry)
+            md5sum = os.system("md5sum '" + path + entry + "' >> '"+  path + entry + " Report/Report.txt'")
+            file_check = os.system("file '" + path + entry + "' >> '"+  path + entry + " Report/Report.txt'")
             
             
-            shutil.move(path + entry, '/home/malware/Desktop/InFeCtEd/Word/' + entry)
+            
+            oleid = os.system("oleid '" + path + entry + "' >> '"+  path + entry + " Report/Report.txt'")
+            #if oleid.find('file contains VBA macros'):
+            olevba = os.system("olevba '" + path + entry + "' >> '"+  path + entry + " Report/Report.txt'")
+                       
+            
+            shutil.move(path + entry, '/home/malware/Desktop/InFeCtEd/Word/' + entry+ " Report")
