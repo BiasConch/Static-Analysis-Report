@@ -15,5 +15,7 @@ Perform Static Analysis on Inputted Files
 
 # Next steps
   PDF files
+  
   Format reports 
+  
   Proper error handling and warnings
