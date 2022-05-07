@@ -11,7 +11,7 @@ Perform Static Analysis on Inputted Files
   Able to sort into directories based on file extension 
   Report.txt is created when successfully run for each document
 
-#Next steps
+Next steps
   PDF files
   Format reports 
   Proper error handling and warnings
