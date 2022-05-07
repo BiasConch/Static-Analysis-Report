@@ -8,7 +8,9 @@ Perform Static Analysis on Inputted Files
   
 # Still a work in progress
   Currently works with password-protected zip file excel and word documents of "infected"
+  
   Able to sort into directories based on file extension 
+  
   Report.txt is created when successfully run for each document
 
 Next steps
