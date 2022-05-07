@@ -13,7 +13,7 @@ Perform Static Analysis on Inputted Files
   
   Report.txt is created when successfully run for each document
 
-Next steps
+# Next steps
   PDF files
   Format reports 
   Proper error handling and warnings
