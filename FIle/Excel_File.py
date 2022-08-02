@@ -15,10 +15,11 @@ def Excel_File():
             os.system("touch " + "Report.txt" )
             os.chdir(path)
             
-            md5sum = os.system("md5sum '" + path + entry + "' >> '"+  path + entry + " Report/Report.txt'")
             file_check = os.system("file '" + path + entry + "' >> '"+  path + entry + " Report/Report.txt'")
+            md5sum = os.system("md5sum '" + path + entry + "' >> '"+  path + entry + " Report/Report.txt'")
             
             
+            exiftool = os.system("exiftool '" + path + entry + "' >> '"+  path + entry + " Report/Report.txt'")
             
             oleid = os.system("oleid '" + path + entry + "' >> '"+  path + entry + " Report/Report.txt'")
             #if oleid.find('file contains VBA macros'):
